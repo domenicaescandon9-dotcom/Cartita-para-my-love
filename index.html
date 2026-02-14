@@ -4,117 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Para mi niño 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       min-height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       display: flex;
-      align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
-    }
-    .sobre {
-      width: 240px;
-      height: 150px;
-      background: #fff;
-      border-radius: 14px;
-      cursor: pointer;
-      position: relative;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      user-select: none;
+      font-family: 'Playfair Display', serif;
     }
-    .carta {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-    .contenido {
-      background: #fff;
-      padding: 18px 16px 20px;
-      border-radius: 16px;
-      max-width: 360px;
-      max-height: 80vh;
-      overflow-y: auto;
-      text-align: left;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      animation: aparecer .4s ease;
-    }
-    .contenido h2 {
+
+    .card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 380px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
       text-align: center;
-      margin-top: 6px;
+      animation: pop 0.6s ease;
     }
-    .contenido img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 10px 0;
-    }
-    @keyframes aparecer {
-      from { transform: scale(.85); opacity: 0; }
+
+    @keyframes pop {
+      from { transform: scale(0.95); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
-    button {
-      display: block;
-      margin: 12px auto 0;
-      padding: 10px 18px;
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      margin: 10px 0;
+      color: #d6336c;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 15px;
+      margin: 12px 0;
+      object-fit: cover;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .letter {
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin: 12px 0;
+    }
+
+    .music-btn {
+      margin-top: 10px;
+      background: #ff6f91;
+      color: white;
       border: none;
       border-radius: 999px;
-      background: #ff5a7a;
-      color: #fff;
-      font-size: 14px;
+      padding: 10px 16px;
+      font-size: 16px;
       cursor: pointer;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    .music-btn:active {
+      transform: scale(0.98);
+    }
+
+    .footer {
+      margin-top: 8px;
+      font-size: 12px;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
 
-  <div class="sobre" onclick="abrirCarta()">
-    💌 Toca para abrir
-  </div>
+  <div class="card">
+    <h1>Para mi niño 💖</h1>
 
-  <div class="carta" id="carta">
-    <div class="contenido">
-      <h2>Para mi niño 💖</h2>
+    <img class="photo" src="Imagen_20260214_122517.jpg" alt="Nuestra foto">
 
-      <img src="Imagen_20260214_122517.jpg" alt="Nuestra foto">
+    <button class="music-btn" onclick="toggleMusic()">🎵 Reproducir música</button>
 
-      <p style="white-space: pre-line;">
-Mi niño no sé cómo empezar a explicarte todo lo que siento por ti, porque a veces el corazón siente demasiado y las palabras se quedan cortitas. Pero hoy quiero intentarlo, porque tú mereces saber lo importante que eres para mí, lo mucho que te amo y lo grande que es el lugar que ocupas en mi vida.
-Desde que llegaste, todo cambió. Cambió la forma en la que veo los días, la manera en la que sonrío cuando pienso en ti, y hasta cómo late mi corazón cuando imagino algo contigo. Tú no eres solo alguien especial para mí, tú eres parte de mi vida, de mis pensamientos, de mis sueños y de mis planes.
-Quiero que sepas que te elijo todos los días. En los días bonitos, en los días difíciles, en los momentos donde todo parece perfecto y también cuando nada lo es. Te elijo porque contigo me siento yo.
-Me importas más de lo que imaginas, y aunque a veces no sepa expresarlo como quisiera, mi amor por ti es real y profundo y aunque ya no estemos juntos yo siempre te voy amar. Y sí te seguiré haciendo detallitos virtuales mientras estemos lejos, eres muy especial para mí.
-Sigo guardando en mi corazón nuestras promesas, esos sueños que compartimos, esos planes que imaginamos juntos. Aún espero que algún día podamos cumplir lo que prometimos, que la vida nos regale ese futuro que soñamos, con nuestras princesitas que hagamos nuestra familia. Que las niñas estén corriendo por la casa, llenando todo de risas, de amor y de pequeños caos hermosos.
-Si alguna vez dudas, quiero que recuerdes esto: tú eres mi persona. Eres mi vida en muchas formas, mi pensamiento constante, mi hombre, mi razón para vivir, en el amor que no se rinde fácil y aunque ya no estemos juntos agradezco que me dejes formar parte de tu vida.
-No prometo ser perfecta, pero sí prometo amarte con todo lo que soy, cuidarte, apoyarte y estar para ti incluso cuando las cosas se pongan difíciles.
-Gracias por existir, por quedarte, por ser tú. Gracias por cada sonrisa, cada palabra, cada momento compartido. Te amo más de lo que puedo escribir aquí, y aún así, esto es solo un pedacito de todo lo que siento por ti. 💖✨
-      </p>
+    <div class="letter">
+      <p>Mi niño no sé cómo empezar a explicarte todo lo que siento por ti, porque a veces el corazón siente demasiado y las palabras se quedan cortitas. Pero hoy quiero intentarlo, porque tú mereces saber lo importante que eres para mí, lo mucho que te amo y lo grande que es el lugar que ocupas en mi vida.</p>
 
-      <audio id="musica" src="No_puedo_evitar_enamorarme_de_ti_(MA4_128k)_092438.m4a"></audio>
+      <p>Desde que llegaste, todo cambió. Cambió la forma en la que veo los días, la manera en la que sonrío cuando pienso en ti, y hasta cómo late mi corazón cuando imagino algo contigo. Tú no eres solo alguien especial para mí, tú eres parte de mi vida, de mis pensamientos, de mis sueños y de mis planes.</p>
 
-      <button onclick="cerrarCarta()">Cerrar 💔</button>
+      <p>Quiero que sepas que te elijo todos los días. En los días bonitos, en los días difíciles, en los momentos donde todo parece perfecto y también cuando nada lo es. Te elijo porque contigo me siento yo.</p>
+
+      <p>Me importas más de lo que imaginas, y aunque a veces no sepa expresarlo como quisiera, mi amor por ti es real y profundo y aunque ya no estemos juntos yo siempre te voy amar. Y sí, te seguiré haciendo detallitos virtuales mientras estemos lejos, eres muy especial para mí.</p>
+
+      <p>Sigo guardando en mi corazón nuestras promesas, esos sueños que compartimos, esos planes que imaginamos juntos. Aún espero que algún día podamos cumplir lo que prometimos, que la vida nos regale ese futuro que soñamos, con nuestras princesitas que hagamos nuestra familia, que las niñas estén corriendo por la casa, llenando todo de risas, de amor y de pequeños caos hermosos.</p>
+
+      <p>Si alguna vez dudas, quiero que recuerdes esto: tú eres mi persona. Eres mi vida en muchas formas, mi pensamiento constante, mi hombre, mi razón para vivir, en el amor que no se rinde fácil y aunque ya no estemos juntos agradezco que me dejes formar parte de tu vida.</p>
+
+      <p>No prometo ser perfecta, pero sí prometo amarte con todo lo que soy, cuidarte, apoyarte y estar para ti incluso cuando las cosas se pongan difíciles.</p>
+
+      <p>Gracias por existir, por quedarte, por ser tú. Gracias por cada sonrisa, cada palabra, cada momento compartido. Te amo más de lo que puedo escribir aquí, y aun así, esto es solo un pedacito de todo lo que siento por ti. 💖✨</p>
     </div>
+
+    <div class="footer">Hecho con amor 💌</div>
   </div>
+
+  <audio id="musica" src="No_puedo_evitar_enamorarme_de_ti_(MA4_128k)_092438.m4a"></audio>
 
   <script>
-    function abrirCarta() {
-      document.getElementById("carta").style.display = "flex";
-      document.getElementById("musica").play();
-    }
-    function cerrarCarta() {
-      document.getElementById("carta").style.display = "none";
-      document.getElementById("musica").pause();
-      document.getElementById("musica").currentTime = 0;
+    const audio = document.getElementById('musica');
+    const btn = document.querySelector('.music-btn');
+
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '⏸️ Pausar música';
+      } else {
+        audio.pause();
+        btn.textContent = '🎵 Reproducir música';
+      }
     }
   </script>
 
 </body>
 </html>
-
