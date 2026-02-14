@@ -2,60 +2,125 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para ti 💖</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Mi cartita para ti 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: 'Pacifico', cursive;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .carta {
+      background: rgba(255,255,255,0.9);
+      padding: 25px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       text-align: center;
-      padding: 40px 20px;
+      position: relative;
+      z-index: 2;
     }
+
     h1 {
-      font-size: 32px;
-      color: #fff;
-      text-shadow: 2px 2px 6px rgba(0,0,0,.3);
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #e63946;
     }
-    p {
-      font-size: 20px;
-      color: #fff;
-      margin: 20px 0;
+
+    .texto {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      white-space: pre-line;
+      text-align: left;
+      margin-bottom: 15px;
     }
+
     .foto {
-      width: 80%;
-      max-width: 300px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,.3);
-      margin: 20px 0;
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
+
     button {
-      background: #ff4d6d;
+      background: #e63946;
       color: white;
       border: none;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-size: 18px;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 14px;
       cursor: pointer;
-      box-shadow: 0 6px 15px rgba(0,0,0,.3);
+      margin-top: 10px;
+    }
+
+    .corazon {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: flotar 6s linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
     }
   </style>
 </head>
 <body>
 
-  <h1>Feliz San Valentín 💘</h1>
-  <p>Esta cartita es para ti, con mucho cariño 🥺💖</p>
+  <div class="carta">
+    <h1>Para ti, mi niño 💌</h1>
 
-  <img src="foto.jpg" class="foto">
+    <div class="texto">
+Mi niño no sé cómo empezar a explicarte todo lo que siento por ti, porque a veces el corazón siente demasiado y las palabras se quedan cortitas. Pero hoy quiero intentarlo, porque tú mereces saber lo importante que eres para mí, lo mucho que te amo y lo grande que es el lugar que ocupas en mi vida.
+Desde que llegaste, todo cambió. Cambió la forma en la que veo los días, la manera en la que sonrío cuando pienso en ti, y hasta cómo late mi corazón cuando imagino algo contigo. Tú no eres solo alguien especial para mí, tú eres parte de mi vida, de mis pensamientos, de mis sueños y de mis planes.
+Quiero que sepas que te elijo todos los días. En los días bonitos, en los días difíciles, en los momentos donde todo parece perfecto y también cuando nada lo es. Te elijo porque contigo me siento yo.
+Me importas más de lo que imaginas, y aunque a veces no sepa expresarlo como quisiera, mi amor por ti es real y profundo y aunque ya no estemos juntos yo siempre te voy amar. Y sí te seguiré haciendo detallitos virtuales mientras estemos lejos, eres muy especial para mí.
+Sigo guardando en mi corazón nuestras promesas, esos sueños que compartimos, esos planes que imaginamos juntos. Aún espero que algún día podamos cumplir lo que prometimos, que la vida nos regale ese futuro que soñamos, con nuestras princesitas que hagamos nuestra familia. Que las niñas estén corriendo por la casa, llenando todo de risas, de amor y de pequeños caos hermosos.
+Si alguna vez dudas, quiero que recuerdes esto: tú eres mi persona. Eres mi vida en muchas formas, mi pensamiento constante, mi hombre, mi razón para vivir, en el amor que no se rinde fácil y aunque ya no estemos juntos agradezco que me dejes formar parte de tu vida.
+No prometo ser perfecta, pero sí prometo amarte con todo lo que soy, cuidarte, apoyarte y estar para ti incluso cuando las cosas se pongan difíciles.
+Gracias por existir, por quedarte, por ser tú. Gracias por cada sonrisa, cada palabra, cada momento compartido. Te amo más de lo que puedo escribir aquí, y aun así, esto es solo un pedacito de todo lo que siento por ti. 💖✨
+    </div>
 
-  <br><br>
+    <img src="foto.jpg" alt="Nuestra foto" class="foto">
 
-  <audio id="musica">
-    <source src="musica.m4a" type="audio/mp4">
-  </audio>
+    <audio id="musica">
+      <source src="musica.m4a" type="audio/mp4">
+    </audio>
 
-  <button onclick="document.getElementById('musica').play()">
-    🎵 Reproducir música
-  </button>
+    <button onclick="document.getElementById('musica').play()">
+      🎵 Reproducir nuestra canción
+    </button>
+  </div>
+
+  <script>
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.innerHTML = "💖";
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.animationDuration = (4 + Math.random() * 3) + "s";
+      document.body.appendChild(corazon);
+
+      setTimeout(() => {
+        corazon.remove();
+      }, 7000);
+    }
+
+    setInterval(crearCorazon, 600);
+  </script>
 
 </body>
 </html>
