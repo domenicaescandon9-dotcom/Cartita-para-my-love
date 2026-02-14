@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi cartita para ti 💖</title>
+  <title>Cartita para mi amor 💌</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
   <style>
     body {
@@ -16,7 +16,7 @@
       overflow: hidden;
     }
 
-    .carta {
+    .pregunta, .carta {
       background: rgba(255,255,255,0.9);
       padding: 25px;
       border-radius: 20px;
@@ -26,6 +26,10 @@
       text-align: center;
       position: relative;
       z-index: 2;
+    }
+
+    .carta {
+      display: none; /* Se muestra solo cuando pulsa "Sí" */
     }
 
     h1 {
@@ -59,7 +63,7 @@
       border-radius: 20px;
       font-size: 14px;
       cursor: pointer;
-      margin-top: 10px;
+      margin: 5px;
     }
 
     .corazon {
@@ -80,7 +84,13 @@
 </head>
 <body>
 
-  <div class="carta">
+  <div class="pregunta">
+    <h1>¿Quieres abrir la carta? 💌</h1>
+    <button id="btnSi">Sí</button>
+    <button id="btnNo">No</button>
+  </div>
+
+  <div class="carta" id="carta">
     <h1>Para ti, mi niño 💌</h1>
 
     <div class="texto">
@@ -106,6 +116,20 @@ Gracias por existir, por quedarte, por ser tú. Gracias por cada sonrisa, cada p
   </div>
 
   <script>
+    const btnSi = document.getElementById("btnSi");
+    const btnNo = document.getElementById("btnNo");
+    const carta = document.getElementById("carta");
+
+    btnSi.addEventListener("click", () => {
+      document.querySelector(".pregunta").style.display = "none";
+      carta.style.display = "block";
+    });
+
+    btnNo.addEventListener("click", () => {
+      btnNo.style.display = "none"; // desaparece el "No"
+      alert("Ups 😅, ahora solo queda el botón de Sí 💖"); 
+    });
+
     function crearCorazon() {
       const corazon = document.createElement("div");
       corazon.classList.add("corazon");
