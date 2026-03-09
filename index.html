@@ -1,1 +1,151 @@
+<!DOCTYPE html><html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños Gabriel</title>
+<style>
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background:#2A2A2A;
+color:#F5F5F5;
+text-align:center;
+}.screen{display:none;padding:40px} .active{display:block}
 
+h1{font-size:3em;margin-bottom:10px}
+
+button{ background:#A7C7E7; border:none; padding:12px 22px; border-radius:10px; font-size:16px; cursor:pointer; margin-top:20px; }
+
+button:hover{transform:scale(1.05)}
+
+.menu{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px}
+
+.card{ background:#3a3a3a; padding:20px; border-radius:12px; width:220px; cursor:pointer; transition:0.3s }
+
+.card:hover{background:#A7C7E7;color:#000}
+
+ul{max-width:600px;margin:auto;text-align:left}
+
+.song{margin:10px 0}
+
+.gallery img{ width:200px; margin:10px; border-radius:10px }
+
+.cake{ font-size:80px; animation:float 3s infinite ease-in-out }
+
+@keyframes float{ 0%{transform:translateY(0)} 50%{transform:translateY(-10px)} 100%{transform:translateY(0)} }
+
+.confetti{ position:fixed; width:10px; height:10px; background:pink; top:-10px; animation:fall 3s linear forwards }
+
+@keyframes fall{ to{transform:translateY(100vh) rotate(720deg)} }
+
+.back{margin-top:30px} </style>
+
+</head><body><div id="start" class="screen active">
+<h1>Feliz Cumpleaños Gabriel</h1>
+<div class="cake">🎂</div>
+<p>
+Hoy es tu día, te deseo todo lo mejor porque te lo mereces, esto no es mucho pero créeme que lo hago con todo mi cariño.<br><br>
+Te quiero demasiado.<br><br>
+<b>Feliz cumpleaños mi niño Gabriel 💗</b>
+</p>
+<button onclick="startPage()">Comenzar</button>
+</div><div id="menu" class="screen">
+<h2>Hay algunas cosas que quiero mostrarte hoy…</h2><div class="menu">
+<div class="card" onclick="openSection('likes')">⭐ Cosas que me gustan de ti</div>
+<div class="card" onclick="openSection('songs')">🎵 Canciones que te dedico</div>
+<div class="card" onclick="openSection('drawings')">🎨 Dibujos para ti</div>
+<div class="card" onclick="openSection('letter')">💌 Carta especial</div>
+<div class="card" onclick="openSection('remember')">⭐ Cosa que no debes olvidar</div>
+<div class="card" onclick="openSection('thanks')">🎁 Sorpresa</div>
+</div>
+</div><div id="likes" class="screen">
+<h2>Cosas que me gustan de ti 💗</h2>
+<p>Sin duda cada pequeña cosa de tu ser me gusta, me gustan simplemente porque se tratan de ti y tú eres lo más importante de mi vida.</p>
+<ul>
+<li>Me gusta tu carita</li>
+<li>Me gustan tus ojos</li>
+<li>Me gusta tu boca</li>
+<li>Me encanta tu hermosa sonrisa</li>
+<li>Me gusta tu nariz</li>
+<li>Me gustan los lunares de tu carita</li>
+<li>Me gustan los hoyuelos cuando sonríes</li>
+<li>Me gustan tus celos</li>
+<li>Me gusta tu linda forma de ser</li>
+<li>Me gusta lo hermoso de tu ser</li>
+<li>Me gusta que tienes un lindo corazón</li>
+<li>Me gusta que eres gracioso</li>
+<li>Me gusta tu lindo cabello</li>
+<li>Me gustan tus cejas</li>
+<li>Me gustan tus manos</li>
+<li>Me gusta tu personalidad</li>
+<li>Me gusta que tienes buenos gustos musicales</li>
+<li>Me gusta que cantes</li>
+<li>Me gusta tu voz</li>
+<li>Me gusta lo feliz que me haces</li>
+<li>Me gusta que eres una increíble persona</li>
+<li>Me gusta lo fuerte que eres</li>
+<li>Me gusta lo cariñoso que eras</li>
+<li>Me gusta cómo te ríes</li>
+<li>Me gustas</li>
+<li>Me gusta lo bonito que es tu cuerpo</li>
+<li>Me gusta absolutamente todo de ti</li>
+</ul>
+<button class="back" onclick="goMenu()">Volver al menú</button>
+</div><div id="songs" class="screen">
+<h2>Canciones que te dedico 🎵</h2>
+<div class="song">Until I Found You</div>
+<div class="song">Perfect</div>
+<div class="song">Earned It</div>
+<div class="song">All I Need</div>
+<div class="song">I Wanna Be Yours</div>
+<div class="song">Virgen</div>
+<button class="back" onclick="goMenu()">Volver al menú</button>
+</div><div id="drawings" class="screen">
+<h2>Dibujos para ti 🎨</h2>
+<p>Aquí irán los dibujos que hice para ti.</p>
+<div class="gallery"></div>
+<button class="back" onclick="goMenu()">Volver al menú</button>
+</div><div id="letter" class="screen">
+<h2>Carta especial 💌</h2>
+<p>Aquí irá la carta que escribiré para ti.</p>
+<button class="back" onclick="goMenu()">Volver al menú</button>
+</div><div id="remember" class="screen">
+<h2>Algo que no debes olvidar ⭐</h2>
+<p>Siempre recuerda lo importante que eres y lo especial que eres para mí.</p>
+<button class="back" onclick="goMenu()">Volver al menú</button>
+</div><div id="thanks" class="screen">
+<h2>Gracias Gabriel 💗</h2>
+<p>Gracias por existir y por todos los momentos que me regalaste.</p>
+<button class="back" onclick="goMenu()">Volver al menú</button>
+</div><script>
+
+function startPage(){
+createConfetti();
+document.getElementById('start').classList.remove('active');
+document.getElementById('menu').classList.add('active');
+}
+
+function openSection(id){
+document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+function goMenu(){
+document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+document.getElementById('menu').classList.add('active');
+}
+
+function createConfetti(){
+for(let i=0;i<80;i++){
+let conf=document.createElement('div');
+conf.className='confetti';
+conf.style.left=Math.random()*100+'vw';
+conf.style.background=['#A7C7E7','pink','#ffffff'][Math.floor(Math.random()*3)];
+conf.style.animationDuration=(Math.random()*2+2)+'s';
+document.body.appendChild(conf);
+setTimeout(()=>conf.remove(),3000);
+}
+}
+
+</script></body>
+        </html>
